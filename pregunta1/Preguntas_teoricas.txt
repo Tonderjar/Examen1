@@ -1,0 +1,68 @@
+Lenguaje en cuestion: Dart
+
+Alcance:
+
+    El lenguaje tiene alcance lexico en la mayoria de los casos, aunque puede hacer uso del 
+    alcance dinamico en ciertos casos.
+
+    Ventaja de esto seria la facilidad de comprension de la semantica del codigo,
+    puesto que es a lo que gran parte de los lenguajes mayormente utilizados acostumbran.
+
+    Una desventaja para el usuario podria ser el tiempo de compilacion, sin embargo, 
+    se compensa con una mayor eficiencia de los programas escritos en el lenguaje
+
+Asociaciones:
+
+    El lenguaje posee tanto asociacion temprana como tardia, puesto que las variables finales 
+    optan por la asociacion temprana mientras que para parametros formales de funciones o clases
+    se toma la opcion de asociacion tardia.
+
+    En cuanto al usuario, la asociacion temprana de ciertos valores permite que algunas partes del codigo
+    sean mas eficientes, mientras que la asociacion tardia en los valores mencionados anteriormente le
+    otorga mas control sobre el programa.
+
+    Como desventaja podria estar precisamente que el programador tenga mas control, puesto que otorga una mayor
+    responsabilidad en cuanto a la manera en que son utilizados esos valores.
+
+Modulos:
+
+    En Dart, existen modulos llamados Librerias y Scripts, que funcionan como libreria, puesto que se puede hacer uso de
+    las funciones de la libreria sin que pertenezcan a una instancia de ella.
+
+    Existen 2 maneras de importar librerias, la primera es sin prefijos, de manera que el programa en el cual fue importada
+    la libreria podra hacer uso directo de los metodos definidos en la libreria sin la necesitad de usar prefijos.
+    En este caso, para aquellos nombres en los que haya colisiones, se ocultaran los importados y se mantendran los locales.
+
+    En el segundo caso, cuando se importa con prefijos, no hay necesidad de ocultar los nombres importados, debido a que se 
+    diferenciaran de los locales por el prefijo necesario para hacer uso de ellos (libreria.calcular(), siendo libreria el prefijo)
+
+    En cuanto a la exportacion, los nombres privados o los importados no son visibles para los que importen el script o libreria.
+    Ademas, para las exportaciones, no es posible que dos librerias exporten un mismo nombre, ya que genera un error en el espacio
+    de nombres exportados.
+
+Aliases:
+
+    En Dart existe el typedef, de manera que es posible crear un alias para una definicion de una funcion definido por el usuario,
+    de manera que en el codigo, en vez de usar la funcion, podemos remplazarlo por el typedef creado. Funciona de la siguiente
+    manera:
+        En primer lugar, creamos el typedef con el nombre a utilizar (typedef suma(parametros);)
+        Luego, utilizamos el nombre de nuestro typedef para asociar una variable a una funcion (suma resulado = funcion_suma;)
+        donde funcion_suma es una funcion.
+        Por ultimo, solo tenemos que, en vez de escribir (resultado = funcion_suma(parametros);), como definimos nuestro typdef, 
+        escribimos (resultado(parametros);), haciendo que cada vez que se utilice esa variable con esa funcion se pueda escribir mas
+        facil. Ademas, podemos asociar otras variables a la funcion con el typedef que definimos previamente(suma).
+
+Sobrecarga:
+
+    En Dart, algunos operadores aritmeticos estan sobrecargados, por ejemplo, el simbolo + puede significar suma si esta en medio 
+    de dos numeros, o puede significar concatenacion si esta entre dos strings.
+
+    Por otra parte, no es posible la sobrecarga de funciones en Dart. Por ejemplo, no puedes tener dos funciones con el mismo nombre
+    aunque tengan diferentes tipos de parametros.
+
+Polimorfismo:
+
+    El polimorfismo en Dart viene dado por la capacidad de que un mismo metodo pueda funcionar para diferentes tipos
+    de objetos, siempre y cuando ambos tipos hereden el metodo de un tipo de objeto que contenga a los dos antes mencionados.
+    Por ejemplo, una clase carro puede tener subclases toyota y ford, pero ambas podrian tener un metodo llamado numero_de_puertas,
+    ya que para un carro puedes obtener la informacion sobre su numero de puertas.
